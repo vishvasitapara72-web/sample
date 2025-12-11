@@ -1,4 +1,4 @@
-<html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -102,4 +102,45 @@
     <!-- simple colorful text logo -->
     <div class="logo" aria-hidden="true">
       <span style="color:#4285F4">G</span>
-      <
+      <span style="color:#EA4335">o</span>
+      <span style="color:#FBBC05">o</span>
+      <span style="color:#4285F4">g</span>
+      <span style="color:#34A853">l</span>
+      <span style="color:#EA4335">e</span>
+    </div>
+
+    <!-- Search form that posts to Google -->
+    <!-- name="q" is required by google for query -->
+    <form class="search" action="https://www.google.com/search" method="GET" role="search" aria-label="Search Google">
+      <div class="search-box">
+        <input type="text" name="q" placeholder="Search Google or type a URL" autocomplete="off" aria-label="Search query" />
+        <button class="icon" type="submit" aria-label="Search">
+          🔍
+        </button>
+      </div>
+
+      <div class="actions" role="group" aria-label="Search actions">
+        <button type="submit">Google Search</button>
+        <button type="button" onclick="lucky()">I'm Feeling Lucky</button>
+      </div>
+    </form>
+
+    <div class="footer">
+      This is a small frontend clone for learning. The real Google homepage uses proprietary code and back-end services.
+    </div>
+  </div>
+
+  <script>
+    // "I'm Feeling Lucky" simulation: searches and opens first result via google's 'btnI' parameter.
+    // Note: modern Google may redirect or behave differently; this is a best-effort simple approach.
+    function lucky(){
+      const q = document.querySelector('input[name=q]').value || '';
+      // open google with 'btnI' -- many browsers/Google behaviors can differ
+      const url = 'https://www.google.com/search?btnI=1&q=' + encodeURIComponent(q);
+      window.location.href = url;
+    }
+
+    // Optional: press Enter submits form (default)
+  </script>
+</body>
+</html>
