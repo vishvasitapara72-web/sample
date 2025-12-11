@@ -1,0 +1,105 @@
+<html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Google — clone</title>
+  <style>
+    /* Simple reset */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: #fff;
+      color:#202124;
+    }
+
+    .page{
+      width:100%;
+      max-width: 760px;
+      padding:48px 16px;
+      text-align:center;
+    }
+
+    /* Logo (simple text SVG-ish) */
+    .logo {
+      margin-bottom: 30px;
+      font-weight: 700;
+      font-size:64px;
+      letter-spacing: -2px;
+      line-height:1;
+    }
+    .logo span { display:inline-block; transform: translateY(3px); }
+
+    /* Search box */
+    form.search {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .search-box {
+      display:flex;
+      align-items:center;
+      border: 1px solid #dfe1e5;
+      box-shadow: 0 1px 6px rgba(32,33,36,.28);
+      border-radius:24px;
+      padding: 8px 12px;
+      background:white;
+    }
+    .search-box input[type="text"]{
+      flex:1;
+      border:0;
+      outline:0;
+      font-size:18px;
+      padding:8px 10px;
+      min-width: 160px;
+    }
+    .search-box button.icon{
+      background:transparent;
+      border:0;
+      cursor:pointer;
+      padding:6px;
+      margin-left:4px;
+    }
+
+    /* Buttons */
+    .actions{
+      margin-top:18px;
+    }
+    .actions button{
+      margin:6px 6px;
+      padding:8px 16px;
+      font-size:14px;
+      border-radius:4px;
+      border:1px solid #f8f9fa;
+      background:#f8f9fa;
+      cursor:pointer;
+    }
+    .actions button.primary{
+      background:#1a73e8;
+      color:white;
+      border: none;
+    }
+
+    /* Footer */
+    .footer{
+      margin-top:60px;
+      font-size:13px;
+      color:#5f6368;
+    }
+
+    /* responsive */
+    @media (max-width:480px){
+      .logo{font-size:48px}
+      .search-box input{font-size:16px}
+    }
+  </style>
+</head>
+<body>
+  <div class="page" role="main">
+    <!-- simple colorful text logo -->
+    <div class="logo" aria-hidden="true">
+      <span style="color:#4285F4">G</span>
+      <
